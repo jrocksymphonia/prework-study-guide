@@ -17,35 +17,166 @@
       <section class="card" id="html-section">
         <h2>HTML</h2>
         <ul>
-            <li>The head element contains information about the webpage</li>
-            <li>The body element represents the visible content shown to the user</li>
-            <li>Enter more HTML notes here!</li>
+          <li>HTML uses Triangle brackets to label tags(<>)</li>
+          <br>
+          <li>Inside the file it has 2 parts to it: the Head, and the Body</li>  
+          <li>The head element contains information about the webpage. It is not visible to the user. Inside it contains:</li>
+            <ul>
+              <li>The title of the page (title)</li>
+              <li>The appropriate link to its CSS file (link/style)</li>
+              <li>The metadata stored like character set, description, keywords, author, and viewpoint (meta)</li>
+            </ul>
+            <br>
+            <li>The body element represents the visible content shown to the user. Inside it contains:</li>
+            <ol>
+              <li>A Header to put stuffs at the top of the page like the title (header)</li>
+              <li>The Main portion where the majority of your content goes (main). It can have tags like (section) to organize your work. This element has attributes like the section type (class) and the name of the section (id)</li>
+              <li>A Footer to put stuffs at the bottom of the page like the author, copyright, contact, site map, and navigation (footer)</li>
+            </ol>
+          <li>These could contain semantic elements like:</li>
+            <ul>
+              <li>Heading tags of various sizes (h1, h2, h3, etc.)</li>
+              <li>Paragraph blocks where most of your text goes (p)</li>
+              <li>Unordered/Bullet point lists (ul) and Ordered/Numbered lists (ol) followed by the list items (li)</li>
+              <li>Images (img) that usually contain attributes like:</li>
+              <ul>
+                <li>The location of the image (src)</li>
+                <li>A description of the images's appearance and functionality (alt)</li>
+                <li>The Width of the image (width)</li>
+                <li>The Height of the image (height)</li>
+              </ul>
+              <li>Space Breaks (br)</li>
+              <li>Hyperlinks (a) which has an atribute (href) that points to the link</li>
+            </ul>
+          <li>As well as non-semantic elements like:</li>
+            <ul> 
+              <li>Page Divisions (div)</li>
+              <li>In-line Divisions (span)</li>
+            </ul>
         </ul>
       </section>
       <section class="card" id="css-section"> 
         <h2>CSS</h2>
         <ul>
-            <li>A margin indicates how much space we want around the outside of an element.</li>
-            <li>A padding indicates how much space we want around the content inside an element.</li>
-            <li>Decorating time w/ CSS!</li>
-            <li>Enter more CSS notes here!</li>
+            <li>There are 3 ways to write CSS:</li>
+            <ol>
+              <li>Inline: Styling directly on the HTML file.</li>
+              <ul> 
+                <li>Useful for quick, permanent changes</li>
+                <li>Less flexible</li>
+                <li>Uses the (style) atribute inside the heading element (h1)</li>
+                <li>Uses HTML tags</li>
+              </ul>
+              <li>Internal: When the whole style sheet is embedded to HTML using (style) and (head) elements</li>
+              <ul>
+                <li> This version uses CSS Rules inside the HTML (head) section</li>
+              </ul>
+              <li>External: All CSS Rules are saved in a separate file and then pasted into the HTML head as a link</li>
+              <ul>
+                <li>Most common method</li>
+                <li>The one I'll be using in this course 💁🏽‍♀️</li>
+              </ul>
+            </ol>
+            <br>
+            <li>The CSS Rules are composed of two things:</li>
+            <ol>
+              <li>A Selector: The name of the element/attribute you're applying the design to. A list of selectors can be:</li>
+              <ul>
+                <li>The page itself (*)</li>
+                <li>The Header (header)</li>
+                <li>The Footer (footer)</li>
+                <li>Headings (h1, h2, etc.)</li>
+                <li>Images (img)</li>
+                <li>Lists (ul, ol)</li>
+                <li>Paragraph (p)</li>
+              </ul>
+              <li>A Declaration Box: 
+              <ul>
+                <li>Inside curly brackets ({}) and separated with semicolons (;)</li>
+                <li>A list of declarations, or CSS properties, we want to apply to the selector, followed by the value of the property</li>
+                <li>Each selector has its own set of declarations, or sets of properties and values</li>
+                <li>i.e. the (*) selector usually have properties like margins and paddings</li>
+                <ul>
+                  <li>A margin indicates how much space we want around the outside of an element.</li>
+                  <li>A padding indicates how much space we want around the content inside an element.</li>
+                  <li>The value for these properties are measured in numbers bc we're determining the spacing of the page</li>
+                </ul>
+              </ul>
+            </ol>
+            <br>
+            <li>A visual: p {text-align: center; font-size: 20px}</li>
         </ul>
       </section>
       <section class="card" id="git-section">
         <h2>Git</h2>
         <ul>
-            <li>git status: checks what branch w are currently on</li>
-            <li>git checkout -b branch-name: creates a new branch and switches to it</li>
-            <li>Enter more Git notes here!</li>
+            <li>Git, or Git commands, are actions done on the command line (terminal on Mac) to connect the code saved on an application on your local computer like VS Code to a remote source like GitHub, and vice versa. 
+              These are a list of common git commands to remember:</li>
+            <ul>
+              <li>git status: Checks what branch we are currently on</li>
+              <li>git checkout main/active branch: Use this to swtich to the branch you wanna view</li>
+              <li>git checkout -b branch-name: Creates a new branch and switches to it</li>
+            </ul>  
+            <br> 
+            <li>To make a new Feature Branch follow these git commands:</li>
+            <ul>
+              <li>git status 
+                (make sure you're on the main branch. If not, type -git checkout main-)
+              </li>
+              <li>git pull origin main 
+                (make sure remote and local main branches are in sync)
+              </li>
+              <li>git checkout -b feature/branch-name
+                (makes the new branch)
+              </li>
+              <li>touch file-name 
+                (Not a git command, but this step makes a new code file in your branch. 
+                These file names can end in suffixes .html, .css, and .js)
+              </li>
+            </ul>
+            <br>
+            <li>To Complete the Git Flow on Command line follow these git commands:</li>
+            <ul>
+              <li>git status 
+                (make sure you're on the feature branch. If not, type - git checkout feature/branch-name -)
+              </li>
+              <li>git add -A 
+                (add all changes)
+              </li>
+              <li>git commit -m "insert-short-descriptive-message"
+                (This is to label your changes!)
+              </li>
+              <li>git pull origin main 
+                (Make sure your current branch is up to date. It should say "Already up to date")
+              </li>
+              <li>git push origin feature/branch-name 
+                (This pushes all the changes you made to GitHub!)
+              </li>
+              <li>The rest of the git flow is done on the GitHub website ✨</li>
+            </ul>
         </ul>
       </section>
       <section class="card" id="javascript-section">
         <h2>JavaScript</h2>
         <ul>
-            <li>I like my words</li>
-            <li>How I like my coffee</li>
-            <li>JavaScript!</li>
-            <li>Enter my JavaScript notes here!</li>
+            <li>Variable: A named container that allows us to store data in our code (var var-name)</li>
+            <li>Control flow: The order in which a computer executes code in a script. It's always from top to bottom. 
+              The only way to disrupt the control flow is by Conditional Logic like:
+            </li>
+            <ul>
+              <li>-if- statements: determines what shows up in the console using true/false logic</li>
+              <li>forLoops</li>
+            </ul>
+            <li>Operators: Math symbols used to define a variable to a value (=, ===, +, !, etc.)</li>
+            <li>Comments: Labels for the coder to the code they made. Examples are //comment-here and /*hello*/</li>
+            <ul>
+              <li>The second example, aka comment out (/* */), can also be used to make code inactive without deleting the code</li>
+            </ul>
+            <li>Functions: A set of instructions that tells the computer how to perform a certain task. Functions have two parts:</li>
+            <ol>
+              <li>Define a Function: All the bells and whistles needed for the function to work</li>
+              <li>Call a Function: The on switch that goes right after you've defined the function. It's shown as -function-name()- </li>
+            </ol>
         </ul>
       </section>
     </main>
